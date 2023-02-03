@@ -3,3 +3,8 @@ __pycache__/
 
 #ignore all venv
 venv/
+
+
+#pytest cache
+.pytest_cache/
+/pytest_cache

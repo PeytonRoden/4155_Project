@@ -12,10 +12,10 @@ class User_Repository:
         user = User_.query.get(user_id)
         return user
 
-    def create_user(self, first_name, last_name, username, email, user_password):
+    def create_user(self, name, email, user_password):
         # TODO create a new User in the DB
 
-        new_user = User_(first_name = first_name, last_name = last_name, username = username, email = email, user_password = user_password)
+        new_user = User_(name = name, email = email, user_password = user_password)
         db.session.add(new_user)
         db.session.commit()
 

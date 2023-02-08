@@ -1,5 +1,5 @@
-import helloworld
+import app
 import pytest
 
 def test_hello_world():
-    assert helloworld.hello_world() == 'Hello World'
+    assert app.hello_world() == 'Hello World'

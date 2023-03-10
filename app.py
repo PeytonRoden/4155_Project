@@ -86,10 +86,10 @@ def load_user(user_id):
 def loginuser():
 
 
-    email = request.form.get('email')
+    email_ = request.form.get('email')
     password = request.form.get('password')
 
-    user = User_.query.filter_by(email=email).first()
+    user = User_.query.filter_by(email=email_).first()
     
 
     # check if the user actually exists
@@ -102,7 +102,7 @@ def loginuser():
     # if the above check passes, then we know the user has the right credentials
     login_user(user)
 
-    print("logged in :" + current_user.email)
+    print("logged in :" + current_user.email_)
 
     # if the above check passes, then we know the user has the right credentials
     return index()
